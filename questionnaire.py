@@ -7,7 +7,7 @@ name_list=['伊澤啓太','石田鉱大','上田愛佳','長島芽依','服部�
            '今村茉由','城諒武','都築美奈','中嶋千賀','山中真名',
            '小川芹葉','加藤総一郎','田口珠理','武内杏樹','橘楓','中村ちゆり','永山治佳','安永晴香']
 
-@app.route("/tsuteto-ryb.github.io/questionnaire")
+@app.route("/tsuteto-ryb.github.io/")
 def index():
     return render_template('questionnaire-toppage.html')
 
