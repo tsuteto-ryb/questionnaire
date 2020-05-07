@@ -7,16 +7,16 @@ name_list=['伊澤啓太','石田鉱大','上田愛佳','長島芽依','服部�
            '今村茉由','城諒武','都築美奈','中嶋千賀','山中真名',
            '小川芹葉','加藤総一郎','田口珠理','武内杏樹','橘楓','中村ちゆり','永山治佳','安永晴香']
 
-@app.route("/github.com/tsuteto-ryb/questionnaire/edit/master/")
+@app.route("/tsuteto-ryb.github.io/questionnaire")
 def index():
     return render_template('questionnaire-toppage.html')
 
-@app.route("/github.com/tsuteto-ryb/questionnaire/edit/master/confirmation")
+@app.route("/tsuteto-ryb.github.io/questionnaire/confirmation")
 def confirmation():
     if request.form.get('name','') in name_list:
         name=request.form.get('name')
         return redirect(url_for('entry'),name=name)
 
-@app.route("/github.com/tsuteto-ryb/questionnaire/edit/master/entry")
+@app.route("/tsuteto-ryb.github.io/questionnaire/entry")
 def entry():
     return render_template('questionnaire.html',name=name,name_list=name_list)
